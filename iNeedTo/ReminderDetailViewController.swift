@@ -34,6 +34,16 @@ class ReminderDetailViewController: UIViewController, UITextFieldDelegate, UITex
         }
         self.titleTextField.delegate = self
         self.notesTextView.delegate = self
+        
+//        let doneButton = UIButton(type: .Custom)
+//        doneButton.setTitle("Done", forState: .Normal)
+//        doneButton.addTarget(self, action: "textView:", forControlEvents: .TouchUpInside)
+//        doneButton.frame = CGRect(x: 20, y: 20, width: 300, height: 30)
+//        
+//        let inputAccessory = UIView(frame: CGRectMake(0, 0, self.view.bounds.size.width, 40))
+//        inputAccessory.addSubview(doneButton)
+//        self.notesTextView.inputAccessoryView?.addSubview(inputAccessory)
+        
         lowButton.layer.cornerRadius = 8
         mediumButton.layer.cornerRadius = 8
         highButton.layer.cornerRadius = 8
