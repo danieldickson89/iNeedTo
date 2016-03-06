@@ -24,6 +24,7 @@ class ReminderDetailViewController: UIViewController, UITextFieldDelegate, UITex
     @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var workButton: UIButton!
     @IBOutlet weak var schoolButton: UIButton!
+    @IBOutlet weak var doneEditingButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -35,21 +36,14 @@ class ReminderDetailViewController: UIViewController, UITextFieldDelegate, UITex
         self.titleTextField.delegate = self
         self.notesTextView.delegate = self
         
-//        let doneButton = UIButton(type: .Custom)
-//        doneButton.setTitle("Done", forState: .Normal)
-//        doneButton.addTarget(self, action: "textView:", forControlEvents: .TouchUpInside)
-//        doneButton.frame = CGRect(x: 20, y: 20, width: 300, height: 30)
-//        
-//        let inputAccessory = UIView(frame: CGRectMake(0, 0, self.view.bounds.size.width, 40))
-//        inputAccessory.addSubview(doneButton)
-//        self.notesTextView.inputAccessoryView?.addSubview(inputAccessory)
-        
         lowButton.layer.cornerRadius = 8
         mediumButton.layer.cornerRadius = 8
         highButton.layer.cornerRadius = 8
         homeButton.layer.cornerRadius = 8
         workButton.layer.cornerRadius = 8
         schoolButton.layer.cornerRadius = 8
+        
+        doneEditingButton.hidden = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -62,12 +56,13 @@ class ReminderDetailViewController: UIViewController, UITextFieldDelegate, UITex
         return true
     }
     
-    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
-        if text == "\n" {
-            textView.resignFirstResponder()
-            return false
-        }
-        return true
+    func textViewDidBeginEditing(textView: UITextView) {
+        doneEditingButton.hidden = false
+    }
+    
+    @IBAction func doneEditingButtonTapped(sender: AnyObject) {
+        notesTextView.resignFirstResponder()
+        doneEditingButton.hidden = true
     }
     
     func updateReminder() {

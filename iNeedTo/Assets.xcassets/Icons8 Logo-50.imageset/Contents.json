@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "iNeedToIcon.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Icons8 Logo-50.png",
       "scale" : "2x"
     },
     {
