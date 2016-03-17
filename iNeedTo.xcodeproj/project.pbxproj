@@ -154,6 +154,7 @@
 				TargetAttributes = {
 					39D1943D1C878C4C004D116F = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = EPHG7LV4VJ;
 					};
 				};
 			};
@@ -319,9 +320,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = iNeedTo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.devMountain.iNeedTo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danieldickson.iNeedTo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -330,9 +332,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = iNeedTo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.devMountain.iNeedTo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danieldickson.iNeedTo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

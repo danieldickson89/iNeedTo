@@ -25,7 +25,7 @@ class AllRemindersTableViewController: UITableViewController {
     }
     
     @IBAction func icons8Tapped(sender: AnyObject) {
-        let alert = UIAlertController(title: "icons created by:", message: String(NSURL(string: "https://icons8.com/")!), preferredStyle: .Alert)
+        let alert = UIAlertController(title: "icons created by:", message: "https://icons8.com/", preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "Take me to their website", style: .Default, handler: { (iconsLink) -> Void in
             let icons8 = NSURL(string: "https://icons8.com")

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1FD6621377A8239E7EE2082094A178AFB84D5279",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1FD6621377A8239E7EE2082094A178AFB84D5279" : 0,
+    "5D732F5DF9FE8A6128437EBA5847C81B9FFBDBCC" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "14055B2B-7182-4CCB-9406-2A071EDBDCEC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1FD6621377A8239E7EE2082094A178AFB84D5279" : "iNeedTo\/",
+    "5D732F5DF9FE8A6128437EBA5847C81B9FFBDBCC" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "iNeedTo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "iNeedTo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/danieldickson89\/iNeedTo",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1FD6621377A8239E7EE2082094A178AFB84D5279"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/danieldickson89\/grouptogroup.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5D732F5DF9FE8A6128437EBA5847C81B9FFBDBCC"
+    }
+  ]
+}
