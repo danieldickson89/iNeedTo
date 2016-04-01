@@ -24,12 +24,14 @@ class ReminderDetailViewController: UIViewController, UITextFieldDelegate, UITex
     @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var workButton: UIButton!
     @IBOutlet weak var schoolButton: UIButton!
-    @IBOutlet weak var doneEditingButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         if let reminder = reminder {
             updateWithReminder(reminder)
         }
@@ -43,7 +45,12 @@ class ReminderDetailViewController: UIViewController, UITextFieldDelegate, UITex
         workButton.layer.cornerRadius = 8
         schoolButton.layer.cornerRadius = 8
         
-        doneEditingButton.hidden = true
+        titleTextField.layer.borderWidth = 3.0
+        titleTextField.layer.borderColor = UIColor.myGrayColor().CGColor
+        titleTextField.layer.cornerRadius = 6.0
+        notesTextView.layer.borderWidth = 3.0
+        notesTextView.layer.borderColor = UIColor.myGrayColor().CGColor
+        notesTextView.layer.cornerRadius = 6.0
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,12 +64,7 @@ class ReminderDetailViewController: UIViewController, UITextFieldDelegate, UITex
     }
     
     func textViewDidBeginEditing(textView: UITextView) {
-        doneEditingButton.hidden = false
-    }
-    
-    @IBAction func doneEditingButtonTapped(sender: AnyObject) {
-        notesTextView.resignFirstResponder()
-        doneEditingButton.hidden = true
+        //doneEditingButton.hidden = false
     }
     
     func updateReminder() {
