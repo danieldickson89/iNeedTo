@@ -543,6 +543,9 @@
                         <outlet property="homeButton" destination="ZVT-Nv-WRv" id="sMh-2a-HjT"/>
                         <outlet property="lowButton" destination="Lkp-7Z-LDK" id="T1z-jD-SLA"/>
                         <outlet property="mediumButton" destination="OGJ-Bv-9AT" id="Occ-Np-EES"/>
+                        <outlet property="notesInputView" destination="0A5-vm-kbM" id="Rbb-N1-SJn"/>
+                        <outlet property="notesNextButton" destination="PY4-gM-euF" id="7N6-5y-TuB"/>
+                        <outlet property="notesPreviousButton" destination="xEY-g1-ulG" id="bz7-4g-u3s"/>
                         <outlet property="notesTextView" destination="S8B-B6-bnI" id="YmE-kH-Cn3"/>
                         <outlet property="saveButton" destination="mab-Cb-oKM" id="OIz-dB-eoK"/>
                         <outlet property="schoolButton" destination="ohl-ul-pj7" id="G6Y-PX-KJa"/>
@@ -567,6 +570,9 @@
                             <state key="normal" title="Next">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="titleNextButtonTapped:" destination="MHX-sq-JVM" eventType="touchUpInside" id="41H-Va-9Ui"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -574,6 +580,49 @@
                         <constraint firstItem="jyL-Ia-dtY" firstAttribute="top" secondItem="Sjo-cH-sXN" secondAttribute="topMargin" constant="3" id="4fD-aK-509"/>
                         <constraint firstItem="jyL-Ia-dtY" firstAttribute="trailing" secondItem="Sjo-cH-sXN" secondAttribute="trailingMargin" constant="8" id="YB2-tR-QyY"/>
                         <constraint firstItem="jyL-Ia-dtY" firstAttribute="bottom" secondItem="Sjo-cH-sXN" secondAttribute="bottomMargin" constant="-3" id="lGC-6X-aSo"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" id="0A5-vm-kbM">
+                    <rect key="frame" x="0.0" y="0.0" width="602" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEY-g1-ulG">
+                            <rect key="frame" x="8" y="3" width="67" height="34"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="67" id="QXZ-be-BTK"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="16"/>
+                            <state key="normal" title="Previous">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="notesPreviousButtonTapped:" destination="MHX-sq-JVM" eventType="touchUpInside" id="qI3-bP-YIy"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PY4-gM-euF">
+                            <rect key="frame" x="534" y="3" width="60" height="34"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="9rF-pz-7hS"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="16"/>
+                            <state key="normal" title="Next">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="notesNextButtonTapped:" destination="MHX-sq-JVM" eventType="touchUpInside" id="DGX-GO-5cF"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="xEY-g1-ulG" firstAttribute="top" secondItem="0A5-vm-kbM" secondAttribute="top" constant="3" id="5W4-dX-pY7"/>
+                        <constraint firstAttribute="trailing" secondItem="PY4-gM-euF" secondAttribute="trailing" constant="8" id="6hL-yU-cux"/>
+                        <constraint firstAttribute="bottom" secondItem="PY4-gM-euF" secondAttribute="bottom" constant="3" id="8Dg-oJ-iNE"/>
+                        <constraint firstItem="PY4-gM-euF" firstAttribute="top" secondItem="0A5-vm-kbM" secondAttribute="top" constant="3" id="Std-e6-End"/>
+                        <constraint firstItem="xEY-g1-ulG" firstAttribute="leading" secondItem="0A5-vm-kbM" secondAttribute="leading" constant="8" id="ebd-O9-3Gx"/>
+                        <constraint firstAttribute="bottom" secondItem="xEY-g1-ulG" secondAttribute="bottom" constant="3" id="eiE-5Z-rge"/>
                     </constraints>
                 </view>
             </objects>

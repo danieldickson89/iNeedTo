@@ -29,6 +29,9 @@ class ReminderDetailViewController: UIViewController, UITextFieldDelegate, UITex
     
     @IBOutlet var titleInputView: UIView!
     @IBOutlet var titleNextButton: UIButton!
+    @IBOutlet var notesInputView: UIView!
+    @IBOutlet weak var notesPreviousButton: UIButton!
+    @IBOutlet weak var notesNextButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -59,6 +62,11 @@ class ReminderDetailViewController: UIViewController, UITextFieldDelegate, UITex
         titleNextButton.layer.cornerRadius = 6.0
         titleTextField.inputAccessoryView = titleInputView
         
+        notesInputView.backgroundColor = UIColor(white: 0.65, alpha: 0.85)
+        notesPreviousButton.layer.cornerRadius = 6.0
+        notesNextButton.layer.cornerRadius = 6.0
+        notesTextView.inputAccessoryView = notesInputView
+        
         notesTextView.layer.borderWidth = 3.0
         notesTextView.layer.borderColor = UIColor.myGrayColor().CGColor
         notesTextView.layer.cornerRadius = 6.0
@@ -80,8 +88,18 @@ class ReminderDetailViewController: UIViewController, UITextFieldDelegate, UITex
         return true
     }
     
-    func textViewDidBeginEditing(textView: UITextView) {
-        //doneEditingButton.hidden = false
+    @IBAction func titleNextButtonTapped(sender: AnyObject) {
+        notesTextView.becomeFirstResponder()
+        updateSaveButton()
+    }
+    
+    
+    @IBAction func notesPreviousButtonTapped(sender: AnyObject) {
+        titleTextField.becomeFirstResponder()
+    }
+    
+    @IBAction func notesNextButtonTapped(sender: AnyObject) {
+        notesTextView.resignFirstResponder()
     }
     
     func updateSaveButton() {
