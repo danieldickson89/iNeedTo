@@ -24,11 +24,17 @@ class ReminderDetailViewController: UIViewController, UITextFieldDelegate, UITex
     @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var workButton: UIButton!
     @IBOutlet weak var schoolButton: UIButton!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    
+    @IBOutlet var titleInputView: UIView!
+    @IBOutlet var titleNextButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ReminderDetailViewController.keyboardDidHide(_:)), name: UIKeyboardDidHideNotification, object: nil)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -48,14 +54,25 @@ class ReminderDetailViewController: UIViewController, UITextFieldDelegate, UITex
         titleTextField.layer.borderWidth = 3.0
         titleTextField.layer.borderColor = UIColor.myGrayColor().CGColor
         titleTextField.layer.cornerRadius = 6.0
+        
+        titleInputView.backgroundColor = UIColor(white: 0.65, alpha: 0.85)
+        titleNextButton.layer.cornerRadius = 6.0
+        titleTextField.inputAccessoryView = titleInputView
+        
         notesTextView.layer.borderWidth = 3.0
         notesTextView.layer.borderColor = UIColor.myGrayColor().CGColor
         notesTextView.layer.cornerRadius = 6.0
+        
+        updateSaveButton()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func keyboardDidHide(notification: NSNotification) {
+        updateSaveButton()
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -65,6 +82,15 @@ class ReminderDetailViewController: UIViewController, UITextFieldDelegate, UITex
     
     func textViewDidBeginEditing(textView: UITextView) {
         //doneEditingButton.hidden = false
+    }
+    
+    func updateSaveButton() {
+        
+        if !titleTextField.text!.isEmpty && levelSelected == true && categorySelected == true {
+            saveButton.enabled = true
+        } else {
+            saveButton.enabled = false
+        }
     }
     
     func updateReminder() {
@@ -154,31 +180,37 @@ class ReminderDetailViewController: UIViewController, UITextFieldDelegate, UITex
     @IBAction func lowButtonTapped(sender: AnyObject) {
         pushLowbutton()
         levelSelected = true
+        updateSaveButton()
     }
     
     @IBAction func mediumButtonTapped(sender: AnyObject) {
         pushMediumButton()
         levelSelected = true
+        updateSaveButton()
     }
     
     @IBAction func highButtonTapped(sender: AnyObject) {
         pushHighButton()
         levelSelected = true
+        updateSaveButton()
     }
     
     @IBAction func homeButtonTapped(sender: AnyObject) {
         pushHomeButton()
         categorySelected = true
+        updateSaveButton()
     }
     
     @IBAction func workButtonTapped(sender: AnyObject) {
         pushWorkButton()
         categorySelected = true
+        updateSaveButton()
     }
     
     @IBAction func schoolButtonTapped(sender: AnyObject) {
         pushSchoolButton()
         categorySelected = true
+        updateSaveButton()
     }
     
     @IBAction func cancelButtonTapped(sender: AnyObject) {

@@ -544,12 +544,38 @@
                         <outlet property="lowButton" destination="Lkp-7Z-LDK" id="T1z-jD-SLA"/>
                         <outlet property="mediumButton" destination="OGJ-Bv-9AT" id="Occ-Np-EES"/>
                         <outlet property="notesTextView" destination="S8B-B6-bnI" id="YmE-kH-Cn3"/>
+                        <outlet property="saveButton" destination="mab-Cb-oKM" id="OIz-dB-eoK"/>
                         <outlet property="schoolButton" destination="ohl-ul-pj7" id="G6Y-PX-KJa"/>
+                        <outlet property="titleInputView" destination="Sjo-cH-sXN" id="ceO-WJ-hzk"/>
+                        <outlet property="titleNextButton" destination="jyL-Ia-dtY" id="wea-jF-GQh"/>
                         <outlet property="titleTextField" destination="OwW-Zf-j60" id="hQd-xa-R4W"/>
                         <outlet property="workButton" destination="ccE-BU-Vxb" id="ZF3-GD-LsI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iKR-fd-MSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="Sjo-cH-sXN">
+                    <rect key="frame" x="0.0" y="0.0" width="602" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyL-Ia-dtY">
+                            <rect key="frame" x="542" y="11" width="60" height="18"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="Iss-g6-qa1"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="16"/>
+                            <state key="normal" title="Next">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="jyL-Ia-dtY" firstAttribute="top" secondItem="Sjo-cH-sXN" secondAttribute="topMargin" constant="3" id="4fD-aK-509"/>
+                        <constraint firstItem="jyL-Ia-dtY" firstAttribute="trailing" secondItem="Sjo-cH-sXN" secondAttribute="trailingMargin" constant="8" id="YB2-tR-QyY"/>
+                        <constraint firstItem="jyL-Ia-dtY" firstAttribute="bottom" secondItem="Sjo-cH-sXN" secondAttribute="bottomMargin" constant="-3" id="lGC-6X-aSo"/>
+                    </constraints>
+                </view>
             </objects>
             <point key="canvasLocation" x="2409" y="913"/>
         </scene>
