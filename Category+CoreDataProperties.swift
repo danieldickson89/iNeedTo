@@ -1,5 +1,5 @@
 //
-//  Reminder+CoreDataProperties.swift
+//  Category+CoreDataProperties.swift
 //  iNeedTo
 //
 //  Created by Daniel Dickson on 4/7/16.
@@ -12,12 +12,9 @@
 import Foundation
 import CoreData
 
-extension Reminder {
+extension Category {
 
-    @NSManaged var isComplete: NSNumber?
-    @NSManaged var level: String?
-    @NSManaged var text: String?
-    @NSManaged var title: String?
-    @NSManaged var category: Category?
+    @NSManaged var iconName: String?
+    @NSManaged var reminders: Reminder?
 
 }

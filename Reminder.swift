@@ -18,7 +18,7 @@ class Reminder: NSManagedObject {
         
         self.title = title
         self.text = text
-        self.category = category
+//        self.category = category
         self.level = level
         self.isComplete = false
     }

@@ -28,6 +28,9 @@
 		39D1944C1C878C4C004D116F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39D1944A1C878C4C004D116F /* LaunchScreen.storyboard */; };
 		39F2314A1CB0434400345DDE /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F231491CB0434400345DDE /* Icons.swift */; };
 		39F2314C1CB05A6F00345DDE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F2314B1CB05A6F00345DDE /* SettingsViewController.swift */; };
+		39FC76D11CB6F50600BCE1A8 /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FC76D01CB6F50600BCE1A8 /* CategoryController.swift */; };
+		39FC76D41CB7032000BCE1A8 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FC76D21CB7032000BCE1A8 /* Category+CoreDataProperties.swift */; };
+		39FC76D51CB7032000BCE1A8 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FC76D31CB7032000BCE1A8 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		39D1944D1C878C4C004D116F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39F231491CB0434400345DDE /* Icons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		39F2314B1CB05A6F00345DDE /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		39FC76D01CB6F50600BCE1A8 /* CategoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
+		39FC76D21CB7032000BCE1A8 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		39FC76D31CB7032000BCE1A8 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,8 @@
 		39D194351C878C4C004D116F = {
 			isa = PBXGroup;
 			children = (
+				39FC76D21CB7032000BCE1A8 /* Category+CoreDataProperties.swift */,
+				39FC76D31CB7032000BCE1A8 /* Category.swift */,
 				392569251C88E3060026EFEC /* Reminder+CoreDataProperties.swift */,
 				392569261C88E3060026EFEC /* Reminder.swift */,
 				392569291C88E39C0026EFEC /* Stack.swift */,
@@ -116,6 +124,7 @@
 				39D194411C878C4C004D116F /* AppDelegate.swift */,
 				39D194451C878C4C004D116F /* Main.storyboard */,
 				3925690A1C88DE6E0026EFEC /* ReminderController.swift */,
+				39FC76D01CB6F50600BCE1A8 /* CategoryController.swift */,
 				39F231491CB0434400345DDE /* Icons.swift */,
 				392569201C88E07C0026EFEC /* ViewControllers */,
 				392569211C88E0940026EFEC /* CellViewControllers */,
@@ -203,9 +212,11 @@
 				392569191C88DFD70026EFEC /* HomeButtonTableViewCell.swift in Sources */,
 				392569111C88DF490026EFEC /* HomeRemindersTableViewController.swift in Sources */,
 				3925691D1C88DFE90026EFEC /* WorkButtonTableViewCell.swift in Sources */,
+				39FC76D11CB6F50600BCE1A8 /* CategoryController.swift in Sources */,
 				392569241C88E1000026EFEC /* Model.xcdatamodeld in Sources */,
 				3925690F1C88DF3C0026EFEC /* AllRemindersTableViewController.swift in Sources */,
 				39F2314A1CB0434400345DDE /* Icons.swift in Sources */,
+				39FC76D41CB7032000BCE1A8 /* Category+CoreDataProperties.swift in Sources */,
 				3925691B1C88DFE10026EFEC /* SchoolButtonTableViewCell.swift in Sources */,
 				39D194421C878C4C004D116F /* AppDelegate.swift in Sources */,
 				3925690D1C88DEA00026EFEC /* Colors.swift in Sources */,
@@ -218,6 +229,7 @@
 				392569271C88E3060026EFEC /* Reminder+CoreDataProperties.swift in Sources */,
 				392569281C88E3060026EFEC /* Reminder.swift in Sources */,
 				39F2314C1CB05A6F00345DDE /* SettingsViewController.swift in Sources */,
+				39FC76D51CB7032000BCE1A8 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

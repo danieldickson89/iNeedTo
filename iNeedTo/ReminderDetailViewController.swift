@@ -121,7 +121,7 @@ class ReminderDetailViewController: UIViewController, UITextFieldDelegate, UITex
         if let reminder = self.reminder {
             reminder.title = title
             reminder.text = text
-            reminder.category = theCategory
+            //reminder.category = theCategory
             reminder.level = theLevel
         } else {
             let newReminder = Reminder(title: title!, text: text, category: theCategory, level: theLevel)
