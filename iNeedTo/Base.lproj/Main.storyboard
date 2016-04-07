@@ -25,7 +25,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4uH-bE-aIE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-295" y="913"/>
+            <point key="canvasLocation" x="-457" y="858"/>
         </scene>
         <!--iNeedTo-->
         <scene sceneID="ola-D4-fCj">
@@ -84,9 +84,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="iNeedTo" id="Ku2-Fj-cTJ">
-                        <barButtonItem key="leftBarButtonItem" image="Icons8 Logo-50" id="URD-ve-H4c">
+                        <barButtonItem key="leftBarButtonItem" image="settings" id="URD-ve-H4c">
                             <connections>
-                                <action selector="icons8Tapped:" destination="bOx-sD-2q7" id="o7a-5d-dN6"/>
+                                <segue destination="Gke-Et-ssa" kind="presentation" identifier="toSettings" modalTransitionStyle="coverVertical" id="wwp-py-3FM"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="mXG-HR-Bj4">
@@ -176,9 +176,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="iNeedTo" id="p8a-Wf-Ghe">
-                        <barButtonItem key="leftBarButtonItem" image="Icons8 Logo-50" id="GYW-Mx-xGY">
+                        <barButtonItem key="leftBarButtonItem" image="settings" id="GYW-Mx-xGY">
                             <connections>
-                                <action selector="icons8ButtonTapped:" destination="wRd-wy-s8Z" id="Abg-1p-bXi"/>
+                                <segue destination="Gke-Et-ssa" kind="presentation" id="xGI-Ah-6s8"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="wjs-lW-zdm">
@@ -411,7 +411,7 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Enter To Do Item Title" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="OwW-Zf-j60">
                                         <rect key="frame" x="0.0" y="0.0" width="584" height="70"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CKJ-mn-ZIs">
                                         <rect key="frame" x="0.0" y="70" width="584" height="17"/>
@@ -431,7 +431,7 @@
                                         <rect key="frame" x="0.0" y="314" width="584" height="70"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lkp-7Z-LDK">
-                                                <rect key="frame" x="0.0" y="0.0" width="181.5" height="70"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="182" height="70"/>
                                                 <color key="backgroundColor" red="0.72941176470000002" green="0.74901960779999999" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="16"/>
                                                 <state key="normal" title="Low">
@@ -442,7 +442,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGJ-Bv-9AT">
-                                                <rect key="frame" x="201.5" y="0.0" width="181" height="70"/>
+                                                <rect key="frame" x="202" y="0.0" width="181" height="70"/>
                                                 <color key="backgroundColor" red="0.72941176470000002" green="0.74901960779999999" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="16"/>
                                                 <state key="normal" title="Medium">
@@ -453,7 +453,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hho-4E-oZ1">
-                                                <rect key="frame" x="402.5" y="0.0" width="181.5" height="70"/>
+                                                <rect key="frame" x="403" y="0.0" width="182" height="70"/>
                                                 <color key="backgroundColor" red="0.72941176470000002" green="0.74901960779999999" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="16"/>
                                                 <state key="normal" title="High">
@@ -472,39 +472,72 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qy3-Yx-aFK">
                                         <rect key="frame" x="0.0" y="401" width="584" height="70"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVT-Nv-WRv">
-                                                <rect key="frame" x="0.0" y="0.0" width="181.5" height="70"/>
-                                                <color key="backgroundColor" red="0.72941176470000002" green="0.74901960779999999" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="16"/>
-                                                <state key="normal" title="Home">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="homeButtonTapped:" destination="MHX-sq-JVM" eventType="touchUpInside" id="7Pd-wh-ib1"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccE-BU-Vxb">
-                                                <rect key="frame" x="201.5" y="0.0" width="181" height="70"/>
-                                                <color key="backgroundColor" red="0.72941176470000002" green="0.74901960779999999" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="16"/>
-                                                <state key="normal" title="Work">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="workButtonTapped:" destination="MHX-sq-JVM" eventType="touchUpInside" id="OSY-Gm-GF7"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohl-ul-pj7">
-                                                <rect key="frame" x="402.5" y="0.0" width="181.5" height="70"/>
-                                                <color key="backgroundColor" red="0.72941176470000002" green="0.74901960779999999" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="16"/>
-                                                <state key="normal" title="School">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="schoolButtonTapped:" destination="MHX-sq-JVM" eventType="touchUpInside" id="Irz-pe-RxJ"/>
-                                                </connections>
-                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o0A-cb-guO">
+                                                <rect key="frame" x="0.0" y="0.0" width="182" height="70"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVT-Nv-WRv">
+                                                        <rect key="frame" x="0.0" y="0.0" width="182" height="70"/>
+                                                        <color key="backgroundColor" red="0.72941176470000002" green="0.74901960779999999" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="16"/>
+                                                        <state key="normal" backgroundImage="home-1">
+                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="homeButtonTapped:" destination="MHX-sq-JVM" eventType="touchUpInside" id="7Pd-wh-ib1"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="ZVT-Nv-WRv" secondAttribute="trailing" id="5Nw-vN-iKO"/>
+                                                    <constraint firstItem="ZVT-Nv-WRv" firstAttribute="top" secondItem="o0A-cb-guO" secondAttribute="top" id="TWX-3Q-8Ki"/>
+                                                    <constraint firstItem="ZVT-Nv-WRv" firstAttribute="leading" secondItem="o0A-cb-guO" secondAttribute="leading" id="l8j-du-8IM"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ZVT-Nv-WRv" secondAttribute="bottom" id="zS1-pz-v3b"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vHS-UD-qrE">
+                                                <rect key="frame" x="202" y="0.0" width="181" height="70"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccE-BU-Vxb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="181" height="70"/>
+                                                        <color key="backgroundColor" red="0.72941176470000002" green="0.74901960779999999" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="16"/>
+                                                        <state key="normal" backgroundImage="work-1">
+                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="workButtonTapped:" destination="MHX-sq-JVM" eventType="touchUpInside" id="OSY-Gm-GF7"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="ccE-BU-Vxb" secondAttribute="trailing" id="2l5-KL-aVG"/>
+                                                    <constraint firstItem="ccE-BU-Vxb" firstAttribute="leading" secondItem="vHS-UD-qrE" secondAttribute="leading" id="944-LL-jlM"/>
+                                                    <constraint firstItem="ccE-BU-Vxb" firstAttribute="top" secondItem="vHS-UD-qrE" secondAttribute="top" id="MbF-Xi-xaG"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ccE-BU-Vxb" secondAttribute="bottom" id="dTL-XW-QOQ"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdW-cL-Iyk">
+                                                <rect key="frame" x="403" y="0.0" width="182" height="70"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohl-ul-pj7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="182" height="70"/>
+                                                        <color key="backgroundColor" red="0.72941176470000002" green="0.74901960779999999" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="16"/>
+                                                        <state key="normal" backgroundImage="school-1">
+                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="schoolButtonTapped:" destination="MHX-sq-JVM" eventType="touchUpInside" id="Irz-pe-RxJ"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="ohl-ul-pj7" secondAttribute="trailing" id="FNP-9n-DHN"/>
+                                                    <constraint firstItem="ohl-ul-pj7" firstAttribute="leading" secondItem="sdW-cL-Iyk" secondAttribute="leading" id="HIw-Ir-bHl"/>
+                                                    <constraint firstItem="ohl-ul-pj7" firstAttribute="top" secondItem="sdW-cL-Iyk" secondAttribute="top" id="MKU-k7-JT6"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ohl-ul-pj7" secondAttribute="bottom" id="VeW-Bb-vIz"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -626,18 +659,106 @@
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="2409" y="913"/>
+            <point key="canvasLocation" x="3073" y="317"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="ZwR-IC-287">
+            <objects>
+                <viewController id="Gke-Et-ssa" customClass="SettingsViewController" customModule="iNeedTo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="esN-s5-lh7"/>
+                        <viewControllerLayoutGuide type="bottom" id="egR-Da-l4L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pt9-WN-lRs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cEx-Cu-KJH">
+                                <rect key="frame" x="20" y="222" width="560" height="329"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Gke-Et-ssa" id="lIC-cZ-9nZ"/>
+                                    <outlet property="delegate" destination="Gke-Et-ssa" id="Zj9-XI-Iqi"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icons provided by icons8.com:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PU3-2m-G4b">
+                                <rect key="frame" x="181" y="143" width="240" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="IuQ-1t-AdW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your task icons" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gk-Ms-UXy">
+                                <rect key="frame" x="166" y="93" width="268" height="37"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="26"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgr-62-Uiz">
+                                <rect key="frame" x="174" y="176" width="252" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="252" id="MuA-Aq-Fan"/>
+                                    <constraint firstAttribute="height" constant="38" id="TDp-Wb-UHS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="16"/>
+                                <state key="normal" title="click here to see their website">
+                                    <color key="titleColor" red="0.21284929657271434" green="0.85708648991010095" blue="0.47550825993626827" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u7R-UJ-du8">
+                                <rect key="frame" x="1" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem id="OKg-ql-dhE">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="F4O-HX-6NB">
+                                            <connections>
+                                                <action selector="saveButtonTapped:" destination="Gke-Et-ssa" id="p4Y-Og-jGL"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="u7R-UJ-du8" firstAttribute="top" secondItem="esN-s5-lh7" secondAttribute="bottom" id="1PZ-bO-LKe"/>
+                            <constraint firstItem="rgr-62-Uiz" firstAttribute="centerX" secondItem="cEx-Cu-KJH" secondAttribute="centerX" id="2Ya-Qw-pel"/>
+                            <constraint firstItem="u7R-UJ-du8" firstAttribute="centerX" secondItem="PU3-2m-G4b" secondAttribute="centerX" id="2q6-hl-NNo"/>
+                            <constraint firstItem="rgr-62-Uiz" firstAttribute="top" secondItem="PU3-2m-G4b" secondAttribute="bottom" constant="7" id="3sC-t2-b0o"/>
+                            <constraint firstItem="PU3-2m-G4b" firstAttribute="centerX" secondItem="rgr-62-Uiz" secondAttribute="centerX" constant="1" id="6o1-WP-pqw"/>
+                            <constraint firstItem="cEx-Cu-KJH" firstAttribute="top" secondItem="rgr-62-Uiz" secondAttribute="bottom" constant="8" symbolic="YES" id="7o8-Rv-ehb"/>
+                            <constraint firstItem="4Gk-Ms-UXy" firstAttribute="centerX" secondItem="PU3-2m-G4b" secondAttribute="centerX" constant="-1" id="9uS-a8-m3g"/>
+                            <constraint firstItem="cEx-Cu-KJH" firstAttribute="trailing" secondItem="Pt9-WN-lRs" secondAttribute="trailingMargin" id="ChY-Gk-nc7"/>
+                            <constraint firstItem="4Gk-Ms-UXy" firstAttribute="top" secondItem="esN-s5-lh7" secondAttribute="bottom" constant="73" id="ITa-k2-IAv"/>
+                            <constraint firstItem="u7R-UJ-du8" firstAttribute="leading" secondItem="Pt9-WN-lRs" secondAttribute="leadingMargin" constant="-19" id="LAG-rB-WPh"/>
+                            <constraint firstItem="PU3-2m-G4b" firstAttribute="top" secondItem="4Gk-Ms-UXy" secondAttribute="bottom" constant="13" id="gDV-DJ-gz7"/>
+                            <constraint firstItem="cEx-Cu-KJH" firstAttribute="leading" secondItem="Pt9-WN-lRs" secondAttribute="leadingMargin" id="n5s-Iw-szR"/>
+                            <constraint firstItem="cEx-Cu-KJH" firstAttribute="bottom" secondItem="egR-Da-l4L" secondAttribute="top" constant="-49" id="nmS-N8-NZu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="cEx-Cu-KJH" id="4ZV-bq-jWr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j6D-tU-RNN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3073" y="1452"/>
         </scene>
     </scenes>
     <resources>
         <image name="Icons8 Logo-50" width="25" height="25"/>
         <image name="all" width="25" height="25"/>
         <image name="home" width="25" height="25"/>
+        <image name="home-1" width="50" height="50"/>
         <image name="incomplete" width="512" height="512"/>
         <image name="school" width="25" height="25"/>
+        <image name="school-1" width="50" height="50"/>
+        <image name="settings" width="25" height="25"/>
         <image name="work" width="25" height="25"/>
+        <image name="work-1" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kyk-P8-Ial"/>
+        <segue reference="xGI-Ah-6s8"/>
+        <segue reference="xWd-fe-cgm"/>
     </inferredMetricsTieBreakers>
 </document>

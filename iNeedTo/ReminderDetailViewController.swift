@@ -51,6 +51,7 @@ class ReminderDetailViewController: UIViewController, UITextFieldDelegate, UITex
         mediumButton.layer.cornerRadius = 8
         highButton.layer.cornerRadius = 8
         homeButton.layer.cornerRadius = 8
+        
         workButton.layer.cornerRadius = 8
         schoolButton.layer.cornerRadius = 8
         

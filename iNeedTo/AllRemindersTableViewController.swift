@@ -14,11 +14,8 @@ class AllRemindersTableViewController: UITableViewController {
         super.viewDidLoad()
     }
     
-    // Changed from viewDidAppear
     override func viewWillAppear(animated: Bool) {
-//        let navbarFont = UIFont(name: "Chalkboard SE", size: 18) ?? UIFont.systemFontOfSize(17)
-//        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: navbarFont, NSForegroundColorAttributeName:UIColor.blackColor()]
-//        tableView.reloadData()
+        tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {

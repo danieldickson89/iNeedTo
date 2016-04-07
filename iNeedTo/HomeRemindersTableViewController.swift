@@ -24,16 +24,16 @@ class HomeRemindersTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func icons8ButtonTapped(sender: AnyObject) {
-        let alert = UIAlertController(title: "icons created by:", message: "https://icons8.com/", preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Take me to their website", style: .Default, handler: { (iconsLink) -> Void in
-            let icons8 = NSURL(string: "https://icons8.com")
-            UIApplication.sharedApplication().openURL(icons8!)
-            
-        }))
-        presentViewController(alert, animated: true, completion: nil)
-    }
+//    @IBAction func icons8ButtonTapped(sender: AnyObject) {
+//        let alert = UIAlertController(title: "icons created by:", message: "https://icons8.com/", preferredStyle: .Alert)
+//        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+//        alert.addAction(UIAlertAction(title: "Take me to their website", style: .Default, handler: { (iconsLink) -> Void in
+//            let icons8 = NSURL(string: "https://icons8.com")
+//            UIApplication.sharedApplication().openURL(icons8!)
+//            
+//        }))
+//        presentViewController(alert, animated: true, completion: nil)
+//    }
     
     // MARK: - Table view data source
     
